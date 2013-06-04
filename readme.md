@@ -6,6 +6,20 @@
 
 `Mife` v0.1.1 是为 [小米网](http://www.xiaomi.com "小米网首页") 前端团队使用的前端模版引擎以及自动化构建的文档集。
 
+##小米网前端编码规范
+
+###[javascript](https://github.com/JsonBeta/Mife/blob/master/mife.md "小米网前端编码规范")
+
+> 包含基本格式化、语句表达式、变量&函数&运算符
+
+###[html]()
+
+>Loading...
+
+###[css]()`less`
+
+>Loading...
+
 ##前端模版引擎
 
 ###[handlebars](https://github.com/JsonBeta/Mife/blob/master/handlebars-tutorial.md "handlebars使用手册")
