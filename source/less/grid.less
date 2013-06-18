@@ -1,15 +1,15 @@
 //
-// Grid system
+// 栅格系统
 // --------------------------------------------------
 
 
-// Fixed (940px)
+// Fixed (缺省 960px)
 #grid > .core(@gridColumnWidth, @gridGutterWidth);
 
-// Fluid (940px)
+// Fluid (缺省 960px)
 #grid > .fluid(@fluidGridColumnWidth, @fluidGridGutterWidth);
 
-// Reset utility classes due to specificity
+// 重置处理特殊性实用工具类
 [class*="span"].hide,
 .row-fluid [class*="span"].hide {
   display: none;

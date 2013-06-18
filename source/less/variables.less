@@ -1,13 +1,13 @@
 //
-// Variables
+// 变量集
 // --------------------------------------------------
 
 
-// Global values
+// XMFE 全局变量
 // --------------------------------------------------
 
 
-// Grays
+// 灰色系
 // -------------------------
 @black:                 #000;
 @grayDarker:            #222;
@@ -18,7 +18,7 @@
 @white:                 #fff;
 
 
-// Accent colors
+// 强调色系
 // -------------------------
 @blue:                  #049cdb;
 @blueDark:              #0064cd;
@@ -30,19 +30,19 @@
 @purple:                #7a43b6;
 
 
-// Scaffolding
+// 脚手架颜色
 // -------------------------
 @bodyBackground:        @white;
 @textColor:             @grayDark;
 
 
-// Links
+// 链接颜色
 // -------------------------
 @linkColor:             #08c;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
-// Typography
+// 字体、大小等
 // -------------------------
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
@@ -58,9 +58,9 @@
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
-// Component sizing
+// 字体大小组件
 // -------------------------
-// Based on 14px font-size and 20px line-height
+// 以FONTSIZE:14PX && LIN-HEIGHT 20PX 为基础;
 
 @fontSizeLarge:         @baseFontSize * 1.25; // ~18px
 @fontSizeSmall:         @baseFontSize * 0.85; // ~12px
@@ -75,14 +75,7 @@
 @borderRadiusSmall:     3px;
 
 
-// Tables
-// -------------------------
-@tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #f9f9f9; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
-@tableBorder:                       #ddd; // table and cell border
-
-// Buttons
+// 按钮
 // -------------------------
 @btnBackground:                     @white;
 @btnBackgroundHighlight:            darken(@white, 10%);
@@ -91,11 +84,6 @@
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
 
-@btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
-
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
 
 @btnWarningBackground:              lighten(@orange, 15%);
 @btnWarningBackgroundHighlight:     @orange;
@@ -103,38 +91,22 @@
 @btnDangerBackground:               #ee5f5b;
 @btnDangerBackgroundHighlight:      #bd362f;
 
-@btnInverseBackground:              #444;
-@btnInverseBackgroundHighlight:     @grayDarker;
 
-
-// COMPONENT VARIABLES
+// 组件
 // --------------------------------------------------
 
-
-// Z-index master list
-// -------------------------
-// Used for a bird's eye view of components dependent on the z-axis
-// Try to avoid customizing these :)
-@zindexDropdown:          1000;
-@zindexPopover:           1010;
-@zindexTooltip:           1030;
-@zindexFixedNavbar:       1030;
-@zindexModalBackdrop:     1040;
-@zindexModal:             1050;
-
-
-// Sprite icons path
+// css sprite icons 路径制定
 // -------------------------
 @iconSpritePath:          "";
 // @iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
 
 
-// Input placeholder text color
+// Input placeholder 文本颜色
 // -------------------------
 @placeholderText:         @grayLight;
 
 
-// Pagination
+// 翻页组件颜色
 // -------------------------
 @paginationBackground:                #fff;
 @paginationBorder:                    #ddd;
@@ -142,7 +114,7 @@
 
 
 
-// Form states and alerts
+// 表单状态
 // -------------------------
 @warningText:             #c09853;
 @warningBackground:       #fcf8e3;
@@ -161,11 +133,11 @@
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 
-// GRID
+// 栅格系统
 // --------------------------------------------------
 
 
-// Default 940px grid
+// 缺省 960PX 栅格
 // -------------------------
 @gridColumns:             12;
 @gridColumnWidth:         60px;

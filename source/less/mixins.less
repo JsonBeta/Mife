@@ -6,7 +6,7 @@
 // UTILITY MIXINS
 // --------------------------------------------------
 
-// Clearfix
+// Clearfix 清除浮动
 // --------
 // For clearing floats like a boss h5bp.com/q
 .clearfix {
@@ -24,7 +24,7 @@
   }
 }
 
-// Webkit-style focus
+// FOCUS状态下效果[发光]
 // ------------------
 .tab-focus() {
   // Default
@@ -42,32 +42,14 @@
   margin-right: auto;
 }
 
-// IE7 inline-block
+// IE7 inline-block HACK处理
 // ----------------
 .ie7-inline-block() {
   *display: inline; /* IE7 inline-block hack */
   *zoom: 1;
 }
 
-// IE7 likes to collapse whitespace on either side of the inline-block elements.
-// Ems because we're attempting to match the width of a space character. Left
-// version is for form buttons, which typically come after other elements, and
-// right version is for icons, which come before. Applying both is ok, but it will
-// mean that space between those elements will be .6em (~2 space characters) in IE7,
-// instead of the 1 space in other browsers.
-.ie7-restore-left-whitespace() {
-  *margin-left: .3em;
-
-  &:first-child {
-    *margin-left: 0;
-  }
-}
-
-.ie7-restore-right-whitespace() {
-  *margin-right: .3em;
-}
-
-// Sizing shortcuts
+// 快速定义SIZE
 // -------------------------
 .size(@height, @width) {
   width: @width;
@@ -77,7 +59,7 @@
   .size(@size, @size);
 }
 
-// Placeholder text
+// Placeholder 属性文本颜色
 // -------------------------
 .placeholder(@color: @placeholderText) {
   &:-moz-placeholder {
@@ -91,37 +73,26 @@
   }
 }
 
-// Text overflow
+// Text overflow 兼容性处理
 // -------------------------
-// Requires inline-block or block for proper styling
 .text-overflow() {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-// CSS image replacement
-// -------------------------
-// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
 
-// CSS3 PROPERTIES
+// CSS3 属性
 // --------------------------------------------------
 
-// Border Radius
+// 圆角边框
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
           border-radius: @radius;
 }
 
-// Single Corner Border Radius
+// 单圆角半径
 .border-top-left-radius(@radius) {
   -webkit-border-top-left-radius: @radius;
       -moz-border-radius-topleft: @radius;
@@ -143,7 +114,7 @@
           border-bottom-left-radius: @radius;
 }
 
-// Single Side Border Radius
+// 单圆角半径
 .border-top-radius(@radius) {
   .border-top-right-radius(@radius);
   .border-top-left-radius(@radius);
@@ -161,14 +132,14 @@
   .border-bottom-left-radius(@radius);
 }
 
-// Drop shadows
+// box-shadows
 .box-shadow(@shadow) {
   -webkit-box-shadow: @shadow;
      -moz-box-shadow: @shadow;
           box-shadow: @shadow;
 }
 
-// Transitions
+// Transitions-过渡
 .transition(@transition) {
   -webkit-transition: @transition;
      -moz-transition: @transition;
@@ -188,7 +159,7 @@
           transition-duration: @transition-duration;
 }
 
-// Transformations
+// Transformations-转换
 .rotate(@degrees) {
   -webkit-transform: rotate(@degrees);
      -moz-transform: rotate(@degrees);
@@ -240,7 +211,7 @@
 
 
 
-// BACKGROUNDS
+// 背景
 // --------------------------------------------------
 
 // 背景色或边框半透明
@@ -331,7 +302,7 @@
     background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
   }
 }
-// Reset filters for IE
+// 重置IE滤镜
 .reset-filter() {
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
@@ -372,6 +343,12 @@
 }
 
 
+// Box sizing
+.box-sizing(@boxmodel) {
+  -webkit-box-sizing: @boxmodel;
+     -moz-box-sizing: @boxmodel;
+          box-sizing: @boxmodel;
+}
 
 // 栅格系统
 // -----------
@@ -484,7 +461,6 @@
       width: 100%;
       .clearfix();
       [class*="span"] {
-        .input-block-level();
         float: left;
         margin-left: @fluidGridGutterWidth;
         *margin-left: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
