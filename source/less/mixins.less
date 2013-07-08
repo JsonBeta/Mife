@@ -439,59 +439,59 @@
 
   }
 
-  // .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
+  .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
 
-  //   .spanX (@index) when (@index > 0) {
-  //     .span@{index} { .span(@index); }
-  //     .spanX(@index - 1);
-  //   }
-  //   .spanX (0) {}
+    .spanX (@index) when (@index > 0) {
+      .span@{index} { .span(@index); }
+      .spanX(@index - 1);
+    }
+    .spanX (0) {}
 
-  //   .offsetX (@index) when (@index > 0) {
-  //     .offset@{index} { .offset(@index); }
-  //     .offset@{index}:first-child { .offsetFirstChild(@index); }
-  //     .offsetX(@index - 1);
-  //   }
-  //   .offsetX (0) {}
+    .offsetX (@index) when (@index > 0) {
+      .offset@{index} { .offset(@index); }
+      .offset@{index}:first-child { .offsetFirstChild(@index); }
+      .offsetX(@index - 1);
+    }
+    .offsetX (0) {}
 
-  //   .offset (@columns) {
-  //     margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth*2);
-  // 	  *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + (@fluidGridGutterWidth*2) - (.5 / @gridRowWidth * 100 * 1%);
-  //   }
+    .offset (@columns) {
+      margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth*2);
+  	  *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + (@fluidGridGutterWidth*2) - (.5 / @gridRowWidth * 100 * 1%);
+    }
 
-  //   .offsetFirstChild (@columns) {
-  //     margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth);
-  //     *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
-  //   }
+    .offsetFirstChild (@columns) {
+      margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) + (@fluidGridGutterWidth);
+      *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+    }
 
-  //   .span (@columns) {
-  //     width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
-  //     *width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%);
-  //   }
+    .span (@columns) {
+      width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
+      *width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%);
+    }
 
-  //   .row-fluid {
-  //     width: 100%;
-  //     .clearfix();
-  //     [class*="span"] {
-  //       float: left;
-  //       margin-left: @fluidGridGutterWidth;
-  //       *margin-left: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
-  //     }
-  //     [class*="span"]:first-child {
-  //       margin-left: 0;
-  //     }
+    .row-fluid {
+      width: 100%;
+      .clearfix();
+      [class*="span"] {
+        float: left;
+        margin-left: @fluidGridGutterWidth;
+        *margin-left: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
+      }
+      [class*="span"]:first-child {
+        margin-left: 0;
+      }
 
-  //     // Space grid-sized controls properly if multiple per line
-  //     .controls-row [class*="span"] + [class*="span"] {
-  //       margin-left: @fluidGridGutterWidth;
-  //     }
+      // Space grid-sized controls properly if multiple per line
+      .controls-row [class*="span"] + [class*="span"] {
+        margin-left: @fluidGridGutterWidth;
+      }
 
-  //     // generate .spanX and .offsetX
-  //     .spanX (@gridColumns);
-  //     .offsetX (@gridColumns);
-  //   }
+      // generate .spanX and .offsetX
+      .spanX (@gridColumns);
+      .offsetX (@gridColumns);
+    }
 
-  // }
+  }
 
   // .input(@gridColumnWidth, @gridGutterWidth) {
 

@@ -44,9 +44,8 @@
 
 // 字体、大小等
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        tahoma,arial,"\5b8b\4f53";
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
 @baseFontFamily:        @sansFontFamily;
@@ -58,7 +57,7 @@
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
-// 字体大小组件
+// 按钮字体大小
 // -------------------------
 // 以FONTSIZE:14PX && LIN-HEIGHT 20PX 为基础;
 
@@ -113,26 +112,6 @@
 @paginationActiveBackground:          #f5f5f5;
 
 
-
-// 表单状态
-// -------------------------
-@warningText:             #c09853;
-@warningBackground:       #fcf8e3;
-@warningBorder:           darken(spin(@warningBackground, -10), 3%);
-
-@errorText:               #b94a48;
-@errorBackground:         #f2dede;
-@errorBorder:             darken(spin(@errorBackground, -10), 3%);
-
-@successText:             #468847;
-@successBackground:       #dff0d8;
-@successBorder:           darken(spin(@successBackground, -10), 5%);
-
-@infoText:                #3a87ad;
-@infoBackground:          #d9edf7;
-@infoBorder:              darken(spin(@infoBackground, -10), 7%);
-
-
 // 栅格系统
 // --------------------------------------------------
 
@@ -155,14 +134,14 @@
 // @gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
 
 
-// // Fluid grid
-// // -------------------------
-// @fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
-// @fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+// Fluid grid
+// -------------------------
+@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
 
-// // 1200px min
-// @fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
-// @fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
+// 1200px min
+@fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
+@fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
 
 // // 768px-979px
 // @fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
